@@ -2,7 +2,7 @@
     width: 400px;
     height: 500px;
     border: 1px solid black;
-    margin: auto; /*căn lề tự động*/
+    margin: auto;
     overflow: hidden; /*ẩn những thứ ngoài phạm vi "game"*/
 }
 
@@ -33,7 +33,7 @@
     position: relative;
     left: 400px;
     top: -500px;
-    animation: block 2s infinite linear; /* tạo ra chuyển động mà k cần js khoangt tg thực thi 2s */
+    animation: block 2s infinite linear; /* tạo ra chuyển động mà k cần js khh tg thực thi 2s */
 }
 
 #ball {

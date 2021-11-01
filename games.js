@@ -5,13 +5,13 @@ let jumping = 0;
 let count = 0;
 
 
-//random khoảng cách ngẫu nhiên, lặp lại nó và + điểm
-kc.addEventListener('animationiteration', () => {
+
+kc.addEventListener('animationiteration',function ()  {
     let random = -((Math.random() * 300) + 150);
     kc.style.top = random + "px";
     count++;
 })
-// gọi hàm chạy sau 10mili(s) để quả bóng tự rơi
+
 setInterval(function () {
     let ballTop = parseInt(window.getComputedStyle(ball).getPropertyValue("top"));
     if (jumping === 0) {
@@ -21,13 +21,14 @@ setInterval(function () {
     let kcTop = parseInt(window.getComputedStyle(kc).getPropertyValue("top"));
     let cTop = -(500 - ballTop);
     if ((ballTop > 480) || ((blockLeft < 20) && ((cTop < kcTop) || (cTop > kcTop + 150)))) {
-        alert("Game over. Score: " + (count - 1));
+        let name = prompt('Tên của bạn:');
+        alert("Game over."+'\n ' + name +':'  + "Score:"   + (count - 1));
         ball.style.top = 100 + "px";
         count = 0;
     }
 }, 10);
 
-//event click bóng di chuyển
+
 function evt() {
     jumping = 1;
     let jumpCount = 0;
