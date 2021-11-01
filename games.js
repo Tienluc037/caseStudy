@@ -5,13 +5,13 @@ let jumping = 0;
 let count = 0;
 
 
-//random khoảng cách ngẫu nhiên
+//random khoảng cách ngẫu nhiên, lặp lại nó và + điểm
 kc.addEventListener('animationiteration', () => {
     let random = -((Math.random() * 300) + 150);
     kc.style.top = random + "px";
     count++;
-});
-
+})
+// gọi hàm chạy sau 10mili(s) để quả bóng tự rơi
 setInterval(function () {
     let ballTop = parseInt(window.getComputedStyle(ball).getPropertyValue("top"));
     if (jumping === 0) {
@@ -27,7 +27,7 @@ setInterval(function () {
     }
 }, 10);
 
-//
+//event click bóng di chuyển
 function evt() {
     jumping = 1;
     let jumpCount = 0;
@@ -42,5 +42,6 @@ function evt() {
             jumpCount = 0;
         }
         jumpCount++;
+
     }, 10);
 }

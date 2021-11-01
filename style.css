@@ -12,7 +12,7 @@
     background-color: black;
     position: relative; /*cách bên trái 400px (định vị trí tuyệt đối cho các tp)*/
     left: 400px;
-    animation: block 2s infinite linear; /* tạo ra chuyển động mà k cần js khoangt tg thực thi 2s */
+    animation: block 2s infinite linear; /* tạo ra chuyển động mà k cần js khg tg thực thi 2s */
 }
 
 @keyframes block { /* thiết lập chuyển động của block*/
